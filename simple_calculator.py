@@ -1,20 +1,22 @@
 import streamlit as st
 
-# title
+# Title
 st.title("Simple Calculator")
 
-# input
+# Inputs
+num1 = st.number_input("Enter first number:")
+num2 = st.number_input("Enter second number:")
 
-num1 = st.number_input("Enter first number")
-num2 = st.number_input("Enter second number")
+# Operation selection
+operation = st.selectbox(
+    "Choose operation", 
+    ("Addition", "Subtraction", "Multiplication", "Division", "Percentage")
+)
 
-# operation
-operation = st.selectbox("Select operation", ["Add", "Subtract", "Multiply", "Divide"])
-
-# calculate
+# Button
 if st.button("Calculate"):
-    if operation == "Additon":
-        result = num1 + num2 
+    if operation == "Addition":
+        result = num1 + num2
     elif operation == "Subtraction":
         result = num1 - num2
     elif operation == "Multiplication":
@@ -29,10 +31,8 @@ if st.button("Calculate"):
             result = (num1 / num2) * 100
         else:
             result = "Cannot calculate percentage with denominator 0!"
-        
 
-# output
- st.success(f"Result: {result}") 
+    st.success(f"Result: {result}")
 
 # Footer
 st.footer("Developed by @Muhammad Maaz")
