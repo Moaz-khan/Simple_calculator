@@ -35,6 +35,6 @@ if st.button("Calculate"):
     st.success(f"Result: {result}")
 
 # Footer
-st.footer("Developed by @Muhammad Maaz")
+st.write("Developed by @Muhammad Maaz")
 
 
