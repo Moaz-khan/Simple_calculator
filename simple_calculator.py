@@ -32,7 +32,7 @@ if st.button("Calculate"):
         
 
 # output
-st.write(f"The result of {num1} {operation} {num2} is {result}") 
+ st.success(f"Result: {result}") 
 
 # Footer
 st.footer("Developed by @Muhammad Maaz")
