@@ -28,7 +28,7 @@ if st.button("Calculate"):
             result = "Cannot divide by zero!"
     elif operation == "Percentage":
         if num2 != 0:
-            result = (num1 / num2) * 100
+            result = (num1 * num2) / 100
         else:
             result = "Cannot calculate percentage with denominator 0!"
 
